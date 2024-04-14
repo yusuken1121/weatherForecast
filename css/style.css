@@ -1,0 +1,363 @@
+@charset "UTF-8";
+header p {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.mainsection {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.container {
+  border: solid; /*containerの枠線に使用 */
+  border-radius: 1%;
+  /* height: 800px; pxにしている理由はvhや%だと画面サイズを変更した際に崩れるから */
+  margin: 0 auto; /*箱の左右の中央寄せに使用 */
+  padding-bottom: 15px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+.form #favoritecity {
+  margin: 8px;
+}
+.form #cityForm {
+  margin: 8px;
+}
+
+h2 {
+  margin: 0 0 0 25px;
+}
+
+.section1 {
+  border: solid;
+  width: 95%;
+  height: 250px;
+  margin: 0 auto;
+}
+.section1 .cityname {
+  display: flex;
+  justify-content: center;
+}
+.section1 .cityname #cityname {
+  text-align: center;
+}
+.section1 .cityname #favoriteButton {
+  /* 背景色を無色に */
+  background: transparent;
+  /* 枠線を消す */
+  border: none;
+  /* クリックした際に枠線をnone消す */
+  outline: none;
+  /* 影を消す */
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 25px;
+}
+.section1 #c {
+  text-align: center;
+}
+.section1 .weatherinfo {
+  margin: auto;
+  border: solid;
+  width: 40%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section2 {
+  border: solid;
+  width: 95%;
+  height: 175px;
+  margin: 0 auto;
+}
+.section2 ul {
+  margin: 0 50px 0 50px; /*上下にmarginが存在したため */
+  padding: 0; /* なぜか左にpaddingがあったため */
+  height: 100%; /*li要素を上下に中央寄せするために使用 */
+  /* li要素だけで高さ調整するとずれた */
+  list-style: none;
+  display: flex; /*li要素を横並びにするのに使用 */
+  justify-content: space-evenly;
+  align-items: center; /*箱を上下に中央寄せするため */
+}
+.section2 ul li {
+  border: solid;
+  width: 80px;
+  height: 150px;
+}
+.section2 ul li p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section3 {
+  border: solid;
+  width: 95%;
+  height: 175px;
+  margin: 0 auto;
+}
+.section3 ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section3 ul li {
+  border: solid;
+  width: 60px;
+  height: 150px;
+}
+.section3 ul li p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: 376px) and (max-width: 800px) {
+  #cityForm {
+    display: flex;
+    flex-direction: column;
+  }
+  #cityInput {
+    width: 90px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .section1 {
+    border: solid;
+    width: 95%;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .section1 .upperpart {
+    display: flex;
+    justify-content: space-around;
+  }
+  .section1 .cityname #cityname {
+    text-align: center;
+  }
+  .section1 .cityname #favoriteButton {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .section1 #c {
+    text-align: center;
+  }
+  .section1 .weatherinfo {
+    margin: auto;
+    border: solid;
+    width: 40%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section2 {
+    border: solid;
+    width: 95%;
+    height: 175px;
+    margin: 0 auto;
+  }
+  .section2 ul {
+    margin: 0 20px 0 20px;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+    display: block;
+    overflow: auto;
+  }
+  .section2 ul li {
+    border: solid;
+    width: auto;
+    height: auto;
+    margin: 5px 0 5px 0;
+  }
+  .section2 ul li p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+  .section3 {
+    border: solid;
+    width: 95%;
+    height: 175px;
+    margin: 0 auto;
+  }
+  .section3 ul {
+    padding: 0;
+    margin: 0 10px 0 10px;
+    list-style: none;
+    height: 100%;
+    display: block;
+    overflow: auto;
+  }
+  .section3 ul li {
+    border: solid;
+    width: auto;
+    height: auto;
+    margin: 5px 0 5px 0;
+  }
+  .section3 ul li p {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 376px) {
+  header p {
+    display: none;
+  }
+  header hr {
+    display: none;
+  }
+  .mainsection {
+    width: auto;
+  }
+  .mainsection #mainsection {
+    display: none;
+  }
+  .container {
+    border: none;
+  }
+  .form {
+    display: flex;
+    justify-content: space-between;
+  }
+  #cityForm {
+    width: auto;
+    display: flex;
+  }
+  #cityInput {
+    width: 90px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  #submitCityInput {
+    width: 60px;
+  }
+  .currentweather {
+    display: none;
+  }
+  .section1 {
+    border: solid;
+    width: 95%;
+    height: 200px;
+    margin: 5px auto;
+  }
+  .section1 .upperpart {
+    display: flex;
+    justify-content: space-around;
+  }
+  .section1 .cityname #cityname {
+    text-align: center;
+  }
+  .section1 .cityname #favoriteButton {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .section1 #c {
+    text-align: center;
+  }
+  .section1 .weatherinfo {
+    margin: auto;
+    border: solid;
+    width: 40%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dailyforecast {
+    display: none;
+  }
+  .section2 {
+    border: solid;
+    width: 95%;
+    height: 175px;
+    margin: 5px auto;
+  }
+  .section2 ul {
+    margin: 0 20px 0 20px;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    overflow: auto;
+    align-items: stretch;
+    align-items: center;
+  }
+  .section2 ul li {
+    border: solid;
+    width: auto;
+    height: 120px;
+    padding: 10px;
+    margin-right: 5px;
+  }
+  .section2 ul li p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+  .section2 ul li:last-child {
+    margin-right: 0;
+  }
+  .hourrange {
+    display: none;
+  }
+  .section3 {
+    border: solid;
+    width: 95%;
+    height: 175px;
+    margin: 0 auto;
+  }
+  .section3 ul {
+    padding: 0;
+    margin: 0 10px 0 10px;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    align-items: stretch;
+    align-items: center;
+  }
+  .section3 ul li {
+    padding: 0 10px 0 10px;
+    border: solid;
+    width: auto;
+    height: 120px;
+    margin-right: 5px;
+    line-height: 40px;
+  }
+  .section3 ul li p {
+    margin: 0;
+    width: 50px;
+  }
+  .section3 ul li:last-child {
+    margin-right: 0;
+  }
+}
+
+
+/*# sourceMappingURL=style.css.map */

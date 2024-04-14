@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="common.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYVHvUdMwnHgkXbKHiMfzpI-ignkZjiDo&libraries=places&callback=initialize"></script>
+    <script src="autocomplete.js"></script>
+    <script type="module" src="replaceWeatherToIcon.js"></script>
+</head>
+
+<body>
+    <header>
+        <p>Weather App</p>
+        <hr>
+    </header>
+    <main>
+        <div class="mainsection">
+            <h2 id="mainsection">Main section</h2>
+            <div class="container">
+                <div class="form">
+                    <form id="favoritecity">
+                        <select name="favs" id="favs">
+                            <option value="">Favorite cities</option>
+                        </select>
+                    </form>
+                    <form id="cityForm">
+                        <input type="text" id="cityInput" name="city" placeholder="Search cities" />
+                        <button type="submit" id="submitCityInput">Submit</button>
+                    </form>
+                </div>
+                <h2 class="currentweather">Current weather</h2>
+                <div class="section1">
+                    <div class="upperpart">
+                        <div class="cityname">
+                            <p id="cityname">City Name</p>
+                            <button type="button" id="favoriteButton">☆</button>
+                        </div>
+                        <p id="c">#C</p>
+                    </div>
+                    <div class="weatherinfo">
+                        <p id="weatherinfo">Weather Info</p>
+                    </div>
+                </div>
+                <h2 class="dailyforecast">Daily Forecast - 5 Days</h2>
+                <div class="section2">
+                    <ul>
+                        <li>
+                            <p>Day1</p>
+                        </li> <!-- li要素のみだとcssでdisplay:flexとdisplay:tableが併用できなかったためpタグで階層を追加した -->
+                        <li>
+                            <p>Day2</p>
+                        </li>
+                        <li>
+                            <p>Day3</p>
+                        </li>
+                        <li>
+                            <p>Day4</p>
+                        </li>
+                        <li>
+                            <p>Day5</p>
+                        </li>
+                    </ul>
+                </div>
+                <h2 class="hourrange">3 hour range</h2>
+                <div class="section3">
+                    <ul>
+                        <li>
+                            <p>0-3</p>
+                        </li>
+                        <li>
+                            <p>3-6</p>
+                        </li>
+                        <li>
+                            <p>6-9</p>
+                        </li>
+                        <li>
+                            <p>9-12</p>
+                        </li>
+                        <li>
+                            <p>12-15</p>
+                        </li>
+                        <li>
+                            <p>15-18</p>
+                        </li>
+                        <li>
+                            <p>18-21</p>
+                        </li>
+                        <li>
+                            <p>21-0</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="fetchWeatherHelper.js"></script>
+    <script type="module" src="fetchWeatherData.js"></script>
+    <script src="favoritebutton.js"></script>
+    <script type="module" src="geocodeCity.js"></script>
+</body>
+<main>
+
+</main>
+
+</html>
